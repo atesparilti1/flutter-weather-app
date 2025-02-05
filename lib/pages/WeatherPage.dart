@@ -62,7 +62,7 @@ class _WeatherpageState extends State<Weatherpage> {
             //animation
             Lottie.asset("assets/cloudy.json"),
             //temperature
-            Text("${_weather?.temperature.round()}*C")
+            Text("${_weather?.temperature.round()} F'")
           ],
         ),
       ),

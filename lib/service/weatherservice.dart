@@ -16,13 +16,13 @@ class WeatherService {
   Future<Weather> getWeather(String cityName) async {
     final response = await http
         .get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?lat=33.44&lon=-94.04&appid=1737bfeb9717db8a4ec2687bcd95c6e1'));
-
     var c = 8;
     log(c);
     if (response.statusCode == 200) {
       return Weather.fromJson(jsonDecode(response.body));
     } else {
       throw Exception("Failed to load weather data");
+
     }
   }
 
